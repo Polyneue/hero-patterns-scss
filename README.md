@@ -12,4 +12,3 @@ This module is currently in development.
     * Testing
 * Testing
     * Write tests for patterns build step
-    * Set up Travis-CI & Coveralls
