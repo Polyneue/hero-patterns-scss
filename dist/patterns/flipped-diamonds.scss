@@ -1,0 +1,5 @@
+////
+// Pattern: Flipped Diamonds
+// License: Pattern from http://www.heropatterns.com
+////
+$flipped-diamonds: "data:image/svg+xml,%3csvg width='16' height='20' viewBox='0 0 16 20' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='{{ fill }}' fill-opacity='{{ opacity }}' fill-rule='evenodd'%3e%3cpath d='M8 0v20L0 10M16 0v10L8 0M16 10v10H8'/%3e%3c/g%3e%3c/svg%3e";

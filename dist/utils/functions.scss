@@ -1,0 +1,37 @@
+////
+// Replace `$search` with `$replace` in `$string`
+// @author Hugo Giraudel
+// @link https://css-tricks.com/snippets/sass/str-replace-function/
+//
+// @param {String} $string - Initial string
+// @param {String} $search - Substring to replace
+// @param {String} $replace ('') - New value
+// @return {String} - Updated string
+////
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+    @return $string;
+}
+
+
+////
+// Generate SVG pattern
+// @param {String} pattern-name - pattern scss variable
+// @param {String} fill - color to user for svg foreground
+// @param {Number} opacity - fill opacity 0.0 - 1.0
+// @return {String} formatted data:image/svg
+////
+@function hero-pattern($pattern-name, $fill, $opacity: 1.0) {
+    // Encode hash
+    $fill: str-replace($fill, '#', '%23');
+
+    // Format Output
+    $output: str-replace($pattern-name, '{{ fill }}', $fill);
+    $output: str-replace($output, '{{ opacity }}', $opacity);
+
+    @return url("#{$output}");
+}
