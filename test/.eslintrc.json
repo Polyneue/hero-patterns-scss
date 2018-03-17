@@ -1,0 +1,17 @@
+{
+  "extends": "airbnb-base",
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+    "prefer-arrow-callback": "off",
+    "comma-dangle": "off",
+    "no-underscore-dangle": "off",
+    "func-names": "off",
+    "no-unused-expressions": "off"
+  }
+}
