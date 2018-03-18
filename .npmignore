@@ -5,3 +5,6 @@ test/
 # Build Processes
 build.js
 libs/
+
+# Documentation
+docs/

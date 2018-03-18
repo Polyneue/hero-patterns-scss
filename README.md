@@ -47,9 +47,11 @@ Hero Patterns SCSS has one main function used to generate the SVG output.
 | `$fill`    | `String` | Hex, RGB, or HSL values.                    |
 | `$opacity` | `Number` | `0.0` through `1.0`. Default is `1.0`.      |
 
-**Notes:**
+**Notes:**  
 For a list of patterns see [Hero Patterns](http://www.heropatterns.com/). To conform to sass variable requirements,
-the pattern names are not a 1:1 match. Below are some examples of converting a pattern name to the Sass variable equivalent.
+the pattern names are not a 1:1 match. You can see the full list of variable names [here](https://github.com/polyneue/hero-patterns-scss/blob/master/dist/patterns/index.scss).
+
+Below are some examples of converting a pattern name to the Sass variable equivalent.
 
 * **4 Point Star:** `$four-point-stars`.
 * **I Like Food:** `$i-like-food`.
