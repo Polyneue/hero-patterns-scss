@@ -49,9 +49,11 @@ Hero Patterns SCSS has one main function used to generate the SVG output.
 
 **Notes:**
 For a list of patterns see [Hero Patterns](http://www.heropatterns.com/). To conform to sass variable requirements,
-the pattern names are not a 1:1 match. Below is an example of converting a pattern name to the Sass variable equivalent.
+the pattern names are not a 1:1 match. Below are some examples of converting a pattern name to the Sass variable equivalent.
 
-*Example:* '4 Point Stars' is `$four-point-stars`.
+* **4 Point Star:** `$four-point-stars`.
+* **I Like Food:** `$i-like-food`.
+* **Circles & Squares:** `$circles-and-squares`
 
 ## Copyright and License
 
