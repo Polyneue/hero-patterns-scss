@@ -39,12 +39,16 @@ body {
 
 Hero Patterns SCSS has one main function used to generate the SVG output.
 
-### `hero-pattern($pattern, $fill, $opacity)`
+#### `hero-pattern($pattern, $fill, $opacity)`
 
-* `$pattern` String (required) - a reference to the pattern that is being generated. See a list of possible patterns and their names on <http://www.heropatterns.com/>.
-    * **Example** for the 4 Point Stars pattern, the corresponding variable would be `$four-point-stars`.
-* `$fill` String (required) - Hex, RGB, or HSL values
-* `$opacity` Number (optional) - `0.0` through `1.0`. Default is `1.0`.
+| Parameter  | Type     | Description                                 |
+| ---------- | -------- | ------------------------------------------- |
+| `$pattern` | `String` | A reference to the pattern being generated. |
+| `$fill`    | `String` | Hex, RGB, or HSL values.                    |
+| `$opacity` | `Number` | `0.0` through `1.0`. Default is `1.0`.      |
+
+**Example** for the 4 Point Stars pattern, the corresponding variable would be `$four-point-stars`.
 
 ## Copyright and License
+
 Code copyright 2018 Ed Mendoza. Code released under the [MIT license](https://github.com/polyneue/hero-patterns-scss/blob/master/LICENSE).
