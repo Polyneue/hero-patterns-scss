@@ -16,7 +16,7 @@ describe('# generateIndex()', function () {
 
   describe('index.scss should be generated', function () {
     // Verify successful build of index.scss
-    it('index.scss exists:', async function () {
+    it('index.scss exists', async function () {
       const result = await fs.existsSync(dist);
       expect(result).to.be.true;
     });
