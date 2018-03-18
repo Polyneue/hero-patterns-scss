@@ -1,4 +1,4 @@
-![Hero Patterns SCSS Cover](https://github.com/polyneue/hero-patterns-scss/blob/master/docs/hero-patterns-scss.gif)
+![Hero Patterns SCSS Cover](https://raw.githubusercontent.com/Polyneue/hero-patterns-scss/master/docs/hero-patterns-scss.gif)
 
 [![Build Status](https://travis-ci.org/Polyneue/hero-patterns-scss.svg?branch=master)](https://travis-ci.org/Polyneue/hero-patterns-scss)
 [![Coverage Status](https://coveralls.io/repos/github/Polyneue/hero-patterns-scss/badge.svg?branch=develop)](https://coveralls.io/github/Polyneue/hero-patterns-scss?branch=develop)
