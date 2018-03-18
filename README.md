@@ -1,12 +1,50 @@
-# hero-patterns-scss
-> Use heropatterns.com SVGs in your SCSS files.
+![Hero Patterns SCSS Cover](https://github.com/polyneue/hero-patterns-scss/blob/master/docs/hero-patterns-scss.gif)
 
-This module is currently in development.
+[![Build Status](https://travis-ci.org/Polyneue/hero-patterns-scss.svg?branch=master)](https://travis-ci.org/Polyneue/hero-patterns-scss)
+[![Coverage Status](https://coveralls.io/repos/github/Polyneue/hero-patterns-scss/badge.svg?branch=develop)](https://coveralls.io/github/Polyneue/hero-patterns-scss?branch=develop)
 
-**TODO:**
-* Write documentation
-    * Introduction
-    * Getting Started
-    * Usage
-        * Options for `hero-pattern()`
-    * Testing
+## Introduction
+
+Hero Patterns SCSS was created to make using [Hero Patterns](http://www.heropatterns.com/) more intuitive. Hero Patterns SCSS makes it easy to add SVG background patterns to your stylesheets with one simple Sass function.
+
+## Features
+
+* Exports only the patterns that you use
+* Provides parameters to easily customize SVG fill and opacity
+* SVG output is optimized using [mini-svg-data-uri](https://github.com/tigt/mini-svg-data-uri)
+
+## Installation
+
+Install package with NPM
+
+```
+npm install hero-patterns-scss --save
+```
+
+## Getting Started
+
+After installing the package, import hero-patterns-scss into your project and use the `hero-pattern()` function to generate the svg output.
+
+```scss
+@import './node_modules/hero-patterns-scss/dist/entry.scss';
+
+body {
+    background-color: #dfdbe5;
+    background-image: hero-pattern($jupiter, #9c92ac, 0.4);
+    background-size: 30px;
+}
+```
+
+## Usage
+
+Hero Patterns SCSS has one main function used to generate the SVG output.
+
+### `hero-pattern($pattern, $fill, $opacity)`
+
+* `$pattern` String (required) - a reference to the pattern that is being generated. See a list of possible patterns and their names on <http://www.heropatterns.com/>.
+    * **Example** for the 4 Point Stars pattern, the corresponding variable would be `$four-point-stars`.
+* `$fill` String (required) - Hex, RGB, or HSL values
+* `$opacity` Number (optional) - `0.0` through `1.0`. Default is `1.0`.
+
+## Copyright and License
+Code copyright 2018 Ed Mendoza. Code released under the [MIT license](https://github.com/polyneue/hero-patterns-scss/blob/master/LICENSE).
