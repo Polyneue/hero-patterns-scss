@@ -47,7 +47,11 @@ Hero Patterns SCSS has one main function used to generate the SVG output.
 | `$fill`    | `String` | Hex, RGB, or HSL values.                    |
 | `$opacity` | `Number` | `0.0` through `1.0`. Default is `1.0`.      |
 
-**Example** for the 4 Point Stars pattern, the corresponding variable would be `$four-point-stars`.
+**Notes:**
+For a list of patterns see [Hero Patterns](http://www.heropatterns.com/). To conform to sass variable requirements,
+the pattern names are not a 1:1 match. Below is an example of converting a pattern name to the Sass variable equivalent.
+
+*Example:* '4 Point Stars' is `$four-point-stars`.
 
 ## Copyright and License
 
