@@ -1,0 +1,7 @@
+# Test related directories
+coverage/
+test/
+
+# Build Processes
+build.js
+libs/

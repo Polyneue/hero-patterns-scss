@@ -10,8 +10,10 @@
   "rules": {
     "prefer-arrow-callback": "off",
     "comma-dangle": "off",
-    "no-underscore-dangle": "off",
     "func-names": "off",
-    "no-unused-expressions": "off"
+    "no-underscore-dangle": "off",
+    "no-unused-expressions": "off",
+    "object-curly-newline": "off",
+    "no-console": "off"
   }
 }

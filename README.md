@@ -10,5 +10,3 @@ This module is currently in development.
     * Usage
         * Options for `hero-pattern()`
     * Testing
-* Testing
-    * Write tests for patterns build step
