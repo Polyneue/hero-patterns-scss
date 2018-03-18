@@ -1,6 +1,6 @@
 {
   "name": "hero-patterns-scss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use heropatterns.com SVGs in your SCSS files.",
   "main": "hero-patterns.scss",
   "scripts": {
