@@ -37,5 +37,10 @@
     "mocha": "^5.0.4",
     "mocha-each": "^1.1.0",
     "rimraf": "^2.6.2"
-  }
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ]
 }
