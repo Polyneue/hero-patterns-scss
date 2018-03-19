@@ -48,13 +48,13 @@ Hero Patterns SCSS has one main function used to generate the SVG output.
 | `$opacity` | `Number` | `0.0` through `1.0`. Default is `1.0`.      |
 
 **Notes:**  
-For a list of patterns see [Hero Patterns](http://www.heropatterns.com/). To conform to sass variable requirements,
+For a list of patterns, see [Hero Patterns](http://www.heropatterns.com/). To conform to sass variable requirements,
 the pattern names are not a 1:1 match. You can see the full list of variable names [here](https://github.com/polyneue/hero-patterns-scss/blob/master/dist/patterns/index.scss).
 
 Below are some examples of converting a pattern name to the Sass variable equivalent.
 
-* **4 Point Star:** `$four-point-stars`.
-* **I Like Food:** `$i-like-food`.
+* **4 Point Star:** `$four-point-stars`
+* **I Like Food:** `$i-like-food`
 * **Circles & Squares:** `$circles-and-squares`
 
 ## Copyright and License
