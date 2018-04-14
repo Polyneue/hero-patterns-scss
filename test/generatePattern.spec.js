@@ -2,7 +2,7 @@ const fs = require('fs');
 const each = require('mocha-each');
 const { promisify } = require('util');
 const { expect } = require('chai');
-const { dist, data } = require('./utilities');
+const { distPatterns, data } = require('./utilities');
 const generatePattern = require('../libs/generatePattern');
 
 // Async utilities
@@ -15,7 +15,7 @@ describe('# generatePattern()', function () {
 
     for (let i = 0; i < data.patterns.length; i++) {
       const pattern = data.patterns[i];
-      patternPromises.push(generatePattern(pattern, dist));
+      patternPromises.push(generatePattern(pattern, distPatterns));
     }
 
     await Promise.all(patternPromises);
@@ -24,14 +24,14 @@ describe('# generatePattern()', function () {
   describe('Pattern files should be generated', function () {
     // Iterate over pattern names to make sure their file exists
     each(data.patternNamesFormatted()).it('%j scss exists', async function (name) {
-      const result = await fs.existsSync(`${dist}/${name}.scss`);
+      const result = await fs.existsSync(`${distPatterns}/${name}.scss`);
       expect(result).to.be.true;
     });
   });
 
   describe('Pattern files should have the content', function () {
     each(data.patternNamesFormatted()).it('%j scss is formatted correctly', async function (name) {
-      const contents = await readFileAsync(`${dist}/${name}.scss`);
+      const contents = await readFileAsync(`${distPatterns}/${name}.scss`);
       const re = new RegExp(`^\\$+${name}+:+\\s+".*"+;`, 'gm');
       expect(contents).to.match(re);
     });

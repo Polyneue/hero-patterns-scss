@@ -9,11 +9,11 @@ const { formatName, writeFileAsync } = require('./utilities');
 const generateIndex = async function (patternNames, dist) {
   try {
     const output = patternNames
-      .map(name => `@import './${formatName(name)}';`)
+      .map(name => `@import '../patterns/${formatName(name)}';`)
       .sort()
       .join('\n');
 
-    return await writeFileAsync(`${dist}/index.scss`, output, 'utf8');
+    return await writeFileAsync(`${dist}/patterns.scss`, output, 'utf8');
   } catch (err) {
     throw err;
   }

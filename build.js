@@ -1,11 +1,14 @@
 const path = require('path');
 const { mkdirAsync } = require('./libs/utilities');
 const generateIndex = require('./libs/generateIndex');
+const generateDictionary = require('./libs/generateDictionary');
 const generatePattern = require('./libs/generatePattern');
 const patterns = require('./patterns.json');
 
 // Set up build location
-const dist = path.join(__dirname, 'dist', 'patterns');
+const dist = path.join(__dirname, 'dist');
+const patternsDir = path.join(dist, 'patterns');
+const partialsDir = path.join(dist, 'partials');
 
 (async function () {
   try {
@@ -13,23 +16,25 @@ const dist = path.join(__dirname, 'dist', 'patterns');
     const patternNames = [];
     const patternLength = patterns.length;
 
-    // Create Patterns directory
-    await mkdirAsync(dist);
+    // Create Patterns/Partials Directories
+    await mkdirAsync(patternsDir);
+    await mkdirAsync(partialsDir);
 
-    // Iterate over the
+    // Iterate over the patterns list
     for (let i = 0; i < patternLength; i++) {
       const pattern = patterns[i];
 
       // Push Pattern name to be added to index generator
       patternNames.push(pattern.name);
-      generatePatternPromises.push(generatePattern(pattern, dist));
+      generatePatternPromises.push(generatePattern(pattern, patternsDir));
     }
 
     // Write Pattern Files
     await Promise.all(generatePatternPromises);
 
     // Write Index File
-    await generateIndex(patternNames, dist);
+    await generateIndex(patternNames, partialsDir);
+    await generateDictionary(patternNames, partialsDir);
   } catch (err) {
     throw err;
   }

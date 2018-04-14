@@ -25,12 +25,30 @@
 // @param {Number} opacity - fill opacity 0.0 - 1.0
 // @return {String} formatted data:image/svg
 ////
-@function hero-pattern($pattern-name, $fill, $opacity: 1.0) {
-    // Encode hash
+@function hero-pattern($pattern-name, $fill: #000000, $opacity: 1.0) {
+     // Convert to string and encode hash
+    $fill: inspect($fill);
     $fill: str-replace($fill, '#', '%23');
 
+    // Pattern
+    $pattern: null;
+    $name: to-lower-case($pattern-name);
+
+    // Check if the pattern name is for the map
+    @if (map-has-key($pattern-map, $name)) {
+        $pattern: map-get($pattern-map, $name);
+    }
+    // Support previous version by just passing the svg data
+    @else if (str-index($pattern-name, 'svg+xml')) {
+        $pattern: $pattern-name
+    }
+    // This isn't a reference for the map or a variable
+    @else {
+        @error '`#{$pattern-name}` is not the name of a pattern or a reference to the pattern\'s variable';
+    }
+
     // Format Output
-    $output: str-replace($pattern-name, '{{ fill }}', $fill);
+    $output: str-replace($pattern, '{{ fill }}', $fill);
     $output: str-replace($output, '{{ opacity }}', $opacity);
 
     @return url("#{$output}");

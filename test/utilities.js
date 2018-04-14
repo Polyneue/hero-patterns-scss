@@ -4,7 +4,8 @@ const { formatName } = require('../libs/utilities');
 
 // Dist directory for tests
 const distDir = path.join(__dirname, 'tmp');
-const dist = path.join(distDir, 'patterns');
+const distPatterns = path.join(distDir, 'patterns');
+const distPartials = path.join(distDir, 'partials');
 
 // Subset of patterns to be tested
 const data = {
@@ -22,7 +23,8 @@ const data = {
 module.exports = {
   patterns,
   distDir,
-  dist,
+  distPatterns,
+  distPartials,
   data,
   formatName
 };

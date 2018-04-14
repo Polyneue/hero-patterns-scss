@@ -1,7 +1,7 @@
 const fs = require('fs');
 const rimraf = require('rimraf');
 const { promisify } = require('util');
-const { dist, distDir } = require('./utilities');
+const { distDir, distPatterns, distPartials } = require('./utilities');
 
 // Async Utilities
 const mkdirAsync = promisify(fs.mkdir);
@@ -12,7 +12,8 @@ before(async function () {
   console.log('Creating temporary dist directory.');
   try {
     await mkdirAsync(distDir);
-    await mkdirAsync(dist);
+    await mkdirAsync(distPatterns);
+    await mkdirAsync(distPartials);
   } catch (err) {
     throw err;
   }
