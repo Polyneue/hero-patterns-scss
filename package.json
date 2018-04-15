@@ -1,6 +1,6 @@
 {
   "name": "hero-patterns-scss",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A Sass utility to generate optimized SVG background images from heropatterns.com",
   "main": "hero-patterns.scss",
   "scripts": {
