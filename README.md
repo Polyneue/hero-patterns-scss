@@ -5,7 +5,7 @@
 
 ## Introduction
 
-Hero Patterns SCSS was created to make using [Hero Patterns](http://www.heropatterns.com/) more intuitive. Hero Patterns SCSS makes it easy to add SVG background patterns to your stylesheets with one simple Sass function.
+Hero Patterns SCSS makes it easy to add SVG background patterns to your stylesheets with one simple Sass function. SVG patterns are from [Hero Patterns](http://www.heropatterns.com/).
 
 ## Features
 
@@ -21,6 +21,14 @@ Install package with NPM
 npm install hero-patterns-scss --save
 ```
 
+**OR**  
+
+Clone the repository and add the `dist/` directory to your project.
+
+```
+git clone git@github.com:Polyneue/hero-patterns-scss.git
+```
+
 ## Getting Started
 
 After installing the package, import hero-patterns-scss into your project and use the `hero-pattern()` function to generate the svg output.
@@ -30,7 +38,7 @@ After installing the package, import hero-patterns-scss into your project and us
 
 body {
     background-color: #dfdbe5;
-    background-image: hero-pattern($jupiter, #9c92ac, 0.4);
+    background-image: hero-pattern('jupiter', #9c92ac, 0.4);
     background-size: 30px;
 }
 ```
@@ -41,21 +49,14 @@ Hero Patterns SCSS has one main function used to generate the SVG output.
 
 #### `hero-pattern($pattern, $fill, $opacity)`
 
-| Parameter  | Type     | Description                                 |
-| ---------- | -------- | ------------------------------------------- |
-| `$pattern` | `String` | A reference to the pattern being generated. |
-| `$fill`    | `String` | Hex, RGB, or HSL values.                    |
-| `$opacity` | `Number` | `0.0` through `1.0`. Default is `1.0`.      |
+| Parameter  | Type     | Description                                    |
+| ---------- | -------- | ---------------------------------------------- |
+| `$pattern` | `String` | The pattern name to be generated.              |
+| `$fill`    | `String` | Hex, RGB, or HSL values. Default is `#000000`. |
+| `$opacity` | `Number` | `0.0` through `1.0`. Default is `1.0`.         |
 
 **Notes:**  
-For a list of patterns, see [Hero Patterns](http://www.heropatterns.com/). To conform to sass variable requirements,
-the pattern names are not a 1:1 match. You can see the full list of variable names [here](https://github.com/polyneue/hero-patterns-scss/blob/master/dist/patterns/index.scss).
-
-Below are some examples of converting a pattern name to the Sass variable equivalent.
-
-* **4 Point Star:** `$four-point-stars`
-* **I Like Food:** `$i-like-food`
-* **Circles & Squares:** `$circles-and-squares`
+For examples of all patterns, see [Hero Patterns](http://www.heropatterns.com/). You can find a full list of names and matching variables [here](https://github.com/polyneue/hero-patterns-scss/blob/master/dist/partials/patterns-map.scss).
 
 ## Copyright and License
 
